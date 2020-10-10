@@ -29,8 +29,7 @@ namespace Application
             builder.ApplyConfiguration(new CategoriesConfiguration());
             builder.ApplyConfiguration(new OrderConfiguration());
             builder.ApplyConfiguration(new OrderDetailConfiguration());
-            builder.ApplyConfiguration(new ImageConfiguration());
-            builder.ApplyConfiguration(new ImageProductsConfiguration());
+
  
             
          
@@ -45,8 +44,8 @@ namespace Application
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-        public DbSet<Image> Images { get; set; }
-        public DbSet<ImageProduct> ImageProducts { get; set; }
+    
+   
 
         
       

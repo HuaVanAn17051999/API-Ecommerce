@@ -105,6 +105,7 @@ namespace API.Controllers
         /// <response code="500">Internal error server</response>
         [HttpGet]
         [Authorize(Roles = "Administrator, Student")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetListAsync()
         {
             const string actionName = nameof(GetListAsync);

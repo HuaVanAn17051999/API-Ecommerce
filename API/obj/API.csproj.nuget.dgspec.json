@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP.NET_CORE\\ShopAnHua\\API\\API.csproj": {}
+    "E:\\.NET_CORE\\ShopAnHua\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\ASP.NET_CORE\\ShopAnHua\\API\\API.csproj": {
+    "E:\\.NET_CORE\\ShopAnHua\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET_CORE\\ShopAnHua\\API\\API.csproj",
+        "projectUniqueName": "E:\\.NET_CORE\\ShopAnHua\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\ASP.NET_CORE\\ShopAnHua\\API\\API.csproj",
+        "projectPath": "E:\\.NET_CORE\\ShopAnHua\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Hua Van An\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET_CORE\\ShopAnHua\\API\\obj\\",
+        "outputPath": "E:\\.NET_CORE\\ShopAnHua\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hua Van An\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\ASP.NET_CORE\\ShopAnHua\\Application\\Application.csproj": {
-                "projectPath": "D:\\ASP.NET_CORE\\ShopAnHua\\Application\\Application.csproj"
+              "E:\\.NET_CORE\\ShopAnHua\\Application\\Application.csproj": {
+                "projectPath": "E:\\.NET_CORE\\ShopAnHua\\Application\\Application.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "D:\\ASP.NET_CORE\\ShopAnHua\\Application\\Application.csproj": {
+    "E:\\.NET_CORE\\ShopAnHua\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET_CORE\\ShopAnHua\\Application\\Application.csproj",
+        "projectUniqueName": "E:\\.NET_CORE\\ShopAnHua\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\ASP.NET_CORE\\ShopAnHua\\Application\\Application.csproj",
+        "projectPath": "E:\\.NET_CORE\\ShopAnHua\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Hua Van An\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET_CORE\\ShopAnHua\\Application\\obj\\",
+        "outputPath": "E:\\.NET_CORE\\ShopAnHua\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hua Van An\\AppData\\Roaming\\NuGet\\NuGet.Config",

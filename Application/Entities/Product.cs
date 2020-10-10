@@ -16,11 +16,9 @@ namespace Application.Entities
         public string Caption { set; get; }
         public string SeoTitle { set; get; }
         public int CategoryId { get; set; }
-        //public string ImagePath { get; set; }
-        //public long ImageSize { get; set; }
+        public string ImagePath { get; set; }
+        public long ImageSize { get; set; }
         public Categories Categories { get; set; }
-        public List<ImageProduct> ImageProducts { get; set; }
-     
         public List<OrderDetail> OrderDetails { get; set; }
     }
 }

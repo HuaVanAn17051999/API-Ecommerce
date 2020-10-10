@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PsyaWgoll6A2Gcv5+vsCqryrDKLmcbQq2zOaD3ElhH/YmWH7SjmlqSg1SihWYNJrxca5FVDzC/zSEH5P1YMW/w==",
+  "dgSpecHash": "OxwfZWjmhAXN0ObROCdcn0NXUcHBxZR5G6S5MfJmxNG1PcCnAb482MsQ6smHJj2tLKRhdafB+5L1gXeDNzzGuw==",
   "success": true,
-  "projectFilePath": "D:\\ASP.NET_CORE\\ShopAnHua\\API\\API.csproj",
+  "projectFilePath": "E:\\.NET_CORE\\ShopAnHua\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hua Van An\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\Hua Van An\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

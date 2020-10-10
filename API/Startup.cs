@@ -110,13 +110,13 @@ namespace API
 
             app.UseRouting();
             app.UseSwagger();
-          
-            //app.UseStaticFiles(new StaticFileOptions()
-            //{
-            //    FileProvider = new PhysicalFileProvider(
-            //    Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\user-content")),
-            //    RequestPath = new Microsoft.AspNetCore.Http.PathString("/user-content")
-            //});
+
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+                Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\user-content")),
+                RequestPath = new Microsoft.AspNetCore.Http.PathString("/user-content")
+            });
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Novahub Assignment API V1");

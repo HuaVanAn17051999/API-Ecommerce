@@ -24,11 +24,6 @@ namespace Application.Entities.EntityConfiguration
                 .WithMany(ur => ur.Products)
                 .HasForeignKey(ur => ur.CategoryId)
                 .IsRequired();
-
-            builder.HasMany(x => x.ImageProducts)
-                .WithOne(x => x.Product)
-                .HasForeignKey(x => x.ProductId)
-                .IsRequired();
         }
     }
 }
