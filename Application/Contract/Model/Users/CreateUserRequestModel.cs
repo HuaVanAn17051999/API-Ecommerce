@@ -19,7 +19,7 @@ namespace Application.Contract.Model.Users
         public string LastName { get; set; }
         public string Role { get; set; }
         [Required]
-        public string Password { get; set; }
+        public string Password { get; set; }    
 
         [Required(ErrorMessage = "Confirm Password required")]
         [Compare("Password", ErrorMessage = "Password doesn't match.")]

@@ -88,7 +88,7 @@ namespace Application.Services.Product
             Logger.LogDebug(LoggingMessage.ActionSuccessfully, actionName, seviceName, id);
         }
 
-        public async Task<PagedList<Entities.Product>> ListProductByCategoryId(int id, OwnerParameters ownerParameters )
+        public async Task<List<ProductReponseModel>> ListProductByCategoryId(int id )
         {
             const string actionName = nameof(ListProductByCategoryId);
 
@@ -97,14 +97,10 @@ namespace Application.Services.Product
                 throw new NotFoundException(nameof(id));
             }
                
-            if (ownerParameters == null)
-            {
-                throw new ArgumentException(nameof(ownerParameters));
-            }
 
             Logger.LogDebug(LoggingMessage.ProcessingInService, actionName, seviceName, id);
 
-            var response = await _productRepository.ListProductByCategoryId(id, ownerParameters);
+            var response = await _productRepository.ListProductByCategoryId(id);
 
             if(response == null)
             {
@@ -168,6 +164,57 @@ namespace Application.Services.Product
 
             return _Mapper.Map<ProductReponseModel>(respone);
 
+        }
+
+        public async Task<List<ProductReponseModel>> SeletedTop8ById(int id)
+        {
+            const string actionName = nameof(SeletedTop8ById);
+
+            Logger.LogDebug(LoggingMessage.ProcessingInService, actionName, seviceName, id);
+
+            var response = await _productRepository.SeletedTop8ById(id);
+
+            if (response == null)
+            {
+                throw new NotFoundException(nameof(id));
+            }
+            Logger.LogDebug(LoggingMessage.ActionSuccessfully, actionName, seviceName, id);
+
+            return _Mapper.Map<List<ProductReponseModel>>(response);
+        }
+        public async Task<List<ProductReponseModel>> DienThoaiMoiNhat()
+        {
+            const string actionName = nameof(DienThoaiMoiNhat);
+
+            Logger.LogDebug(LoggingMessage.ProcessingInService, actionName, seviceName);
+
+            var response = await _productRepository.DienThoaiMoiNhat();
+
+            if(response == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            Logger.LogDebug(LoggingMessage.ActionSuccessfully, actionName, seviceName);
+
+            return response;
+        }
+        public async Task<List<ProductReponseModel>> LapTopMoiNhat()
+        {
+            const string actionName = nameof(LapTopMoiNhat);
+
+            Logger.LogDebug(LoggingMessage.ProcessingInService, actionName, seviceName);
+
+            var response = await _productRepository.LapTopMoiNhat();
+
+            if (response == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            Logger.LogDebug(LoggingMessage.ActionSuccessfully, actionName, seviceName);
+
+            return response;
         }
     }
 }

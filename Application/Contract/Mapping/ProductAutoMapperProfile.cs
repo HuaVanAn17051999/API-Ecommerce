@@ -16,6 +16,7 @@ namespace Application.Contract.Mapping
             CreateMap<CreateProductRequestModel, Product>();
             CreateMap<UpdateProductRequestModel, Product>();
             CreateMap<Product, ProductReponseModel>();
+            CreateMap<Product, List<ProductReponseModel>>();
 
             CreateMap<PagedList<Product>, PagedList<ProductReponseModel>>();
 

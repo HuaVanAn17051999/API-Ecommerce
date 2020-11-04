@@ -67,6 +67,11 @@ namespace Application.Services.User
 
             createUserRequestModel = createUserRequestModel ?? throw new ArgumentException(nameof(createUserRequestModel));
 
+            var email = await _userManager.FindByEmailAsync(createUserRequestModel.Email);
+
+            if (email != null)
+                throw new DataAlreadyException(nameof(createUserRequestModel.Email));
+
             Logger.LogDebug(LoggingMessage.ProcessingInService, actionName, seviceName, createUserRequestModel);
             var user = _Mapper.Map<Entities.User>(createUserRequestModel);
                 

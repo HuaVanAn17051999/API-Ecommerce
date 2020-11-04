@@ -50,6 +50,7 @@ namespace API.Controllers
         /// <response code="500">Internal error server</response>
         [HttpPost]
         [Authorize(Roles = "Administrator")]
+        [AllowAnonymous]
         public async Task<ActionResult<UserResponseModel>> CreateAsync([FromBody] CreateUserRequestModel createUserRequestModel)
         {
             const string actionName = nameof(CreateAsync);

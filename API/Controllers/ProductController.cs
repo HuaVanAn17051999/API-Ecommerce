@@ -82,29 +82,28 @@ namespace API.Controllers
         /// GetByCategoriesAsync product async
         /// </summary>
         /// <param name="id">product id to ListProductByCategoryId</param>
-        /// <param name="ownerParameters">product id to update</param>
         /// <response code="204">GetListAsync product successfuly</response> 
         /// <response code="500">Internal error server</response>
         [HttpGet("ListProductByCategoryId/{id}")]
         [AllowAnonymous]
-        public async Task<ActionResult> ListProductByCategoryId(int id,[FromQuery] OwnerParameters ownerParameters)
+        public async Task<ActionResult> ListProductByCategoryId(int id)
         {
             const string actionName = nameof(ListProductByCategoryId);
 
             Logger.LogDebug(LoggingMessage.ProcessingRequestWithModel, actionName, id);
 
-            var response = await _productAppService.ListProductByCategoryId(id, ownerParameters);
+            var response = await _productAppService.ListProductByCategoryId(id);
 
-            var metadata = new
-            {
-                response.TotalCount,
-                response.PageSize,
-                response.CurrentPage,
-                response.TotalPages,
-                response.HasNext,
-                response.HasPrevious
-            };
-            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+            //var metadata = new
+            //{
+            //    response.TotalCount,
+            //    response.PageSize,
+            //    response.CurrentPage,
+            //    response.TotalPages,
+            //    response.HasNext,
+            //    response.HasPrevious
+            //};
+            //Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
             Logger.LogDebug(LoggingMessage.RequestResults, actionName);
 
             return Ok(response);
@@ -125,6 +124,59 @@ namespace API.Controllers
             Logger.LogDebug(LoggingMessage.ProcessingRequestWithModel, actionName, id);
 
             var response = await _productAppService.GetByIdAsync(id);
+
+            return Ok(response);
+        }
+        /// <summary>
+        /// GetProductTop10 product async
+        /// </summary>
+        /// <param name="id">product id to getById</param>
+        /// <response code="204">GetProductTop10 product successfuly</response> 
+        /// <response code="500">Internal error server</response>
+        [HttpGet("GetProductTop10/{id}")]
+        [AllowAnonymous]
+        public async Task<ActionResult> GetProductTop8(int id)
+        {
+            const string actionName = nameof(GetProductTop8);
+
+            Logger.LogDebug(LoggingMessage.ProcessingRequestWithModel, actionName, id);
+
+            var response = await _productAppService.SeletedTop8ById(id);
+
+            return Ok(response);
+        }
+        /// <summary>
+        /// DienThoaiMoiNhat  async
+        /// </summary>
+        /// <response code="204">DienThoaiMoiNhat successfuly</response> 
+        /// <response code="500">Internal error server</response>
+        [HttpGet("DienThoaiMoiNhat")]
+        [AllowAnonymous]
+        public async Task<ActionResult> DienThoaiMoiNhat()
+        {
+            const string actionName = nameof(DienThoaiMoiNhat);
+
+            Logger.LogDebug(LoggingMessage.ProcessingRequestWithModel, actionName);
+
+            var response = await _productAppService.DienThoaiMoiNhat();
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// LapTopMoiNhat  async
+        /// </summary>
+        /// <response code="204">LapTopMoiNhat successfuly</response> 
+        /// <response code="500">Internal error server</response>
+        [HttpGet("LapTopMoiNhat")]
+        [AllowAnonymous]
+        public async Task<ActionResult> LapTopMoiNhat()
+        {
+            const string actionName = nameof(LapTopMoiNhat);
+
+            Logger.LogDebug(LoggingMessage.ProcessingRequestWithModel, actionName);
+
+            var response = await _productAppService.LapTopMoiNhat();
 
             return Ok(response);
         }

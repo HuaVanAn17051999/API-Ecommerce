@@ -11,9 +11,12 @@ namespace Application.Services.Product
         //Task<ProductReponseModel> CreateAsync(CreateProductRequestModel createProductRequestModel);
         //Task<ProductReponseModel> UpdateAsync(int id, UpdateProductRequestModel updateProductRequestModel);
         Task DeleteAsync(int id);
-        Task<PagedList<Entities.Product>>ListProductByCategoryId (int id, OwnerParameters ownerParameters );
+        Task<List<ProductReponseModel>> ListProductByCategoryId(int id);
         Task<ProductReponseModel> GetByIdAsync(int id);
+        Task<List<ProductReponseModel>> SeletedTop8ById(int id);
+        Task<List<ProductReponseModel>> DienThoaiMoiNhat();
+        Task<List<ProductReponseModel>> LapTopMoiNhat();
 
-        
+
     }
 }

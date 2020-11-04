@@ -17,5 +17,6 @@ namespace Application.Contract.Model.Products
         public string ImagePath { get; set; }
         public string SeoTitle { set; get; }
         public int  CategoryId { get; set; }
+        public int ParentId { get; set; }
     }
 }

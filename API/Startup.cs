@@ -137,7 +137,7 @@ namespace API
             });
             loggerFactory.AddLog4Net();
 
-            SeedData.Seed(app.ApplicationServices).Wait();
+            //SeedData.Seed(app.ApplicationServices).Wait();
         }
     }
 }

@@ -77,12 +77,11 @@
             <response code="204">Delete product successfuly</response> 
             <response code="500">Internal error server</response>
         </member>
-        <member name="M:API.Controllers.ProductController.ListProductByCategoryId(System.Int32,Application.Common.OwnerParameters)">
+        <member name="M:API.Controllers.ProductController.ListProductByCategoryId(System.Int32)">
             <summary>
             GetByCategoriesAsync product async
             </summary>
             <param name="id">product id to ListProductByCategoryId</param>
-            <param name="ownerParameters">product id to update</param>
             <response code="204">GetListAsync product successfuly</response> 
             <response code="500">Internal error server</response>
         </member>
@@ -92,6 +91,28 @@
             </summary>
             <param name="id">product id to getById</param>
             <response code="204">GetByIdAsync product successfuly</response> 
+            <response code="500">Internal error server</response>
+        </member>
+        <member name="M:API.Controllers.ProductController.GetProductTop8(System.Int32)">
+            <summary>
+            GetProductTop10 product async
+            </summary>
+            <param name="id">product id to getById</param>
+            <response code="204">GetProductTop10 product successfuly</response> 
+            <response code="500">Internal error server</response>
+        </member>
+        <member name="M:API.Controllers.ProductController.DienThoaiMoiNhat">
+            <summary>
+            DienThoaiMoiNhat  async
+            </summary>
+            <response code="204">DienThoaiMoiNhat successfuly</response> 
+            <response code="500">Internal error server</response>
+        </member>
+        <member name="M:API.Controllers.ProductController.LapTopMoiNhat">
+            <summary>
+            LapTopMoiNhat  async
+            </summary>
+            <response code="204">LapTopMoiNhat successfuly</response> 
             <response code="500">Internal error server</response>
         </member>
         <member name="M:API.Controllers.RoleController.GetListRoleAsync">
